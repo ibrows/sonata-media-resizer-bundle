@@ -1,0 +1,13 @@
+{
+    "name": "ibrows/sonata-media-resizer-bundle",
+    "description": "Bundle for providing resizers for sonata media",
+    "keywords": ["ibrows", "sonata", "media", "resizer"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "Ibrows\\SonataMediaResizerBundle\\": "" }
+    },
+    "require": {
+        "sonata-prject/media-bundle": "*"
+    }
+}

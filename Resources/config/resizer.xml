@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://symfony.com/schema/dic/services"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="ibrows.sonatamediaresizer.imagickcropthumbnail.mode">inset</parameter>
+        <parameter key="ibrows.sonatamediaresizer.imagickcropthumbnail.defaultquality">90</parameter>
+        <parameter key="ibrows.sonatamediaresizer.imagickcropthumbnail.defaultcompression">10</parameter>
+    </parameters>
+    <services>
+        <service id="ibrows.sonatamediaresizer.imagickcropthumbnail" class="Ibrows\SonataMediaResizerBundle\Resizer\ImagickCropThumbnailResizer">
+            <argument type="service" id="sonata.media.metadata.proxy"/>
+            <argument>%ibrows.sonatamediaresizer.imagickcropthumbnail.mode%</argument>
+            <argument>%ibrows.sonatamediaresizer.imagickcropthumbnail.defaultquality%</argument>
+            <argument>%ibrows.sonatamediaresizer.imagickcropthumbnail.defaultcompression%</argument>
+        </service>
+    </services>
+</container>
