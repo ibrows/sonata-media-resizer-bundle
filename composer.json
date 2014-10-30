@@ -8,6 +8,6 @@
         "psr-4": { "Ibrows\\SonataMediaResizerBundle\\": "" }
     },
     "require": {
-        "sonata-prject/media-bundle": "*"
+        "sonata-project/media-bundle": "*"
     }
 }
