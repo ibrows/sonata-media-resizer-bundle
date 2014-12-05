@@ -13,5 +13,8 @@
             <argument>%ibrows.sonatamediaresizer.imagickcropthumbnail.defaultquality%</argument>
             <argument>%ibrows.sonatamediaresizer.imagickcropthumbnail.defaultcompression%</argument>
         </service>
+        <service id="ibrows.sonatamediaresizer.imagicknocropthumbnail" class="Ibrows\SonataMediaResizerBundle\Resizer\ImagickNoCropThumbnailResizer">
+            <argument type="service" id="sonata.media.metadata.proxy"/>
+        </service>
     </services>
 </container>
