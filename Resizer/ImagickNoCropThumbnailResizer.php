@@ -115,8 +115,12 @@ class ImagickNoCropThumbnailResizer implements ResizerInterface
      */
     protected function validateSettings(MediaInterface $media, array &$settings)
     {
+        if (!$settings['width'] && !$settings['height']) {
+            throw new \RuntimeException(sprintf('Width and height parameter is missing in context "%s" for provider "%s"', $media->getContext(), $media->getProviderName()));
+        }
+
         if (!$settings['width']) {
-            throw new \RuntimeException(sprintf('Width parameter is missing in context "%s" for provider "%s"', $media->getContext(), $media->getProviderName()));
+            $settings['width'] = $settings['height'];
         }
 
         if (!$settings['height']) {
