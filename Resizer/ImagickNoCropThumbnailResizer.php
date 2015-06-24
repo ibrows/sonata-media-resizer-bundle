@@ -16,11 +16,6 @@ class ImagickNoCropThumbnailResizer implements ResizerInterface
     protected $metadata;
 
     /**
-     * @var string
-     */
-    protected $mode;
-
-    /**
      * @param MetadataBuilderInterface $metadata
      */
     public function __construct(MetadataBuilderInterface $metadata)
